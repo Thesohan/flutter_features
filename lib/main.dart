@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/ui/pages/MyHomePage.dart';
 import 'package:news_app/ui/pages/features.dart';
 
 void main() => runApp(MyApp());

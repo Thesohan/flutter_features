@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:news_app/ui/pages/newCustomer.dart';
+import 'package:news_app/ui/pages/scaling.dart';
 import 'package:news_app/ui/pages/showCustomerList.dart';
 import 'package:news_app/ui/providers/customersList.dart';
 import 'package:provider/provider.dart';
@@ -52,6 +53,14 @@ class Features extends StatelessWidget {
                   ),
                 ),
               );
+            },
+          ),
+          RaisedButton(
+            child: Text("Scaling Example"),
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context)=> Scaling(),
+              ),);
             },
           )
         ],
