@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:news_app/bloc/news_blac.dart';
 import 'package:news_app/model/articles.dart';
 import 'package:news_app/model/news.dart';
-import 'package:news_app/ui/full_news.dart';
+import 'package:news_app/ui/pages/fullNews.dart';
 
 class MyHomePage extends StatelessWidget {
   final title;
@@ -190,17 +190,19 @@ class AllNewsCard extends StatelessWidget {
                 ),
               ),
             ),
-            Expanded(
-              flex: 1,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.network(
-                  news.urlToImage,
-                  fit: BoxFit.cover,
-                  repeat: ImageRepeat.noRepeat,
-                ),
-              ),
-            ),
+            news.urlToImage != null
+                ? Expanded(
+                    flex: 1,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Image.network(
+                        news.urlToImage,
+                        fit: BoxFit.cover,
+                        repeat: ImageRepeat.noRepeat,
+                      ),
+                    ),
+                  )
+                : Container(),
           ],
         ),
       ),
